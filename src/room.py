@@ -10,6 +10,6 @@ class Room:
 
 
 
-# test = Room("Iowa State","Full of Silly Lads tbh get out of there and go to lambda")
+# test = Room("Bryces Bed Room","Really dirty room. Looks like it has been through several hurricanes")
 
 # print(test)

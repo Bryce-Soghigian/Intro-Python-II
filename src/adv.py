@@ -7,12 +7,9 @@ room = {
     'outside':  Room("Outside Cave Entrance",
                      "North of you, the cave mount beckons"),
 
-    'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
-passages run north and east."""),
+    'foyer':    Room("Foyer", "Dim light filters in from the south. Dusty passages run north and east."),
 
-    'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
-into the darkness. Ahead to the north, a light flickers in
-the distance, but there is no way across the chasm."""),
+    'overlook': Room("Grand Overlook", "A steep cliff appears before you, falling into the darkness. \n Ahead to the north, a light flickers in the distance,\n but there is no way across the chasm."),
 
     'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
 to north. The smell of gold permeates the air."""),
@@ -50,9 +47,40 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+#Creating new player
 new_player = Player("BryBryTheFryGuy","foyer")
+#messing with our data 
 
+def get_rooms():
+    for item in room.keys():
+        print(item)
+    choose_path_input()
+
+
+
+
+"""
+Setting up my Room Structure
+function that when you reach a room it describes it.
+input handler
+
+"""
+#setting up input and rules
 def choose_path_input():
     global direction
-    direction=input("To Move Around Use The N,S,E,W Keys. And to quit the game please enter q")
+    print(f"To Move Around Use The n,s,e,w Keys. \n To See all the Rooms press R \n And to quit the game please enter q\n")
+    direction=input().lower()
+    game_handler()
+#setting up direction handler
+def game_handler():
+    if direction == 'r':
+        get_rooms()
+    if direction == 'q':
+        print(f"You have Quit the Game Successfully")
+    elif direction == 'Q':
+        print(f"You have Quit the Game Successfully")
 
+
+
+
+choose_path_input()
