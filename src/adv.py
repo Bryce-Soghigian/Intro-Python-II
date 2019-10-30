@@ -1,4 +1,5 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
@@ -49,3 +50,9 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+new_player = Player("BryBryTheFryGuy","foyer")
+
+def choose_path_input():
+    global direction
+    direction=input("To Move Around Use The N,S,E,W Keys. And to quit the game please enter q")
+
