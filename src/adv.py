@@ -68,7 +68,7 @@ input handler
 #setting up input and rules
 def choose_path_input():
     global direction
-    print(f"To Move Around Use The n,s,e,w Keys. \n To See all the Rooms press R \n And to quit the game please enter q\n")
+    print(f"To Move Around Use The N,S,E,W Keys. \n To See all the Rooms press R \n And to quit the game please enter q\n")
     direction=input().lower()
     game_handler()
 #setting up direction handler
@@ -77,8 +77,7 @@ def game_handler():
         get_rooms()
     if direction == 'q':
         print(f"You have Quit the Game Successfully")
-    elif direction == 'Q':
-        print(f"You have Quit the Game Successfully")
+
 
 
 
