@@ -2,14 +2,12 @@
 # description attributes.
 
 class Room:
-    def __init__(self,name,description):
-        self.name=name
-        self.description=description
-    def __str__(self):
-        print(f"You Enter a Room! It is called... \n ---------------------------------------------\n  {self.name} \n ================= \n Room Description \n _________________________\n {self.description} \n")
-
-
-
-# test = Room("Bryces Bed Room","Really dirty room. Looks like it has been through several hurricanes")
-
-# print(test)
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.n_to = None
+        self.s_to = None
+        self.e_to = None
+        self.w_to = None
+    def __repr__(self):
+        return f'{repr(self.name)} \n{repr(self.description)}'
